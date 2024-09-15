@@ -51,6 +51,10 @@
         a:hover {
             color: #fd575dc7;
         }
+
+        .x-card-color {
+            background-color: rgba(255,255,255,0.6);
+        }
     </style>
 </head>
 

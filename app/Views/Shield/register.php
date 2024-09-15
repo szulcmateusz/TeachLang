@@ -5,7 +5,7 @@
 <?= $this->section('main') ?>
 
 <div id="login-container" class="container d-flex justify-content-center p-5">
-    <div class="card col-12 col-md-5 shadow-sm" style="background-color: rgba(255,255,255,0.6);">
+    <div class="card col-12 col-md-5 shadow-sm x-card-color">
         <div class="card-body text-center">
             <img src="/assets/img/logo.webp" class="w-50" alt="Logo">
             <h5 class="card-title"><?= lang('Auth.register') ?></h5>
@@ -54,10 +54,10 @@
                 </div>
 
                 <div class="d-grid col-12 col-md-8 mx-auto m-3">
-                    <button type="submit" class="btn btn-primary btn-block">Zarejestruj się</button>
+                    <button type="submit" class="btn btn-primary btn-block"><?= lang('Auth.register') ?></button>
                 </div>
 
-                <p class="text-center">Masz już konto? <a href="<?= url_to('login') ?>">Zaloguj się</a></p>
+                <p class="text-center"><?= lang('Auth.haveAccount') ?> <a href="<?= url_to('login') ?>"><?= lang('Auth.login') ?></a></p>
 
             </form>
         </div>

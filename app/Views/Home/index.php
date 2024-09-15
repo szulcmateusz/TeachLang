@@ -13,16 +13,23 @@
                             potrzeb oraz poziomu zaawansowania. Wybierz mentora, który pomoże Ci w szybkim opanowaniu
                             podstaw, doskonaleniu gramatyki czy rozwijaniu płynności w mowie.</p>
                         <div class="d-flex justify-content-center">
-                            <div class="mx-2">
-                                <button type="button" class="btn btn-success btn-rounded" data-mdb-ripple-init>Zaloguj
-                                    się
-                                </button>
-                            </div>
-                            <div class="mx-2">
-                                <button type="button" class="btn btn-secondary btn-rounded" data-mdb-ripple-init>Utwórz
-                                    konto
-                                </button>
-                            </div>
+                            <?php if (auth()->loggedIn()): ?>
+                                <div class="mx-2">
+                                    <a href="/logout" class="btn btn-secondary btn-rounded">Wyloguj się
+                                    </a>
+                                </div>
+                            <?php else: ?>
+                                <div class="mx-2">
+                                    <a href="/login" class="btn btn-success btn-rounded">Zaloguj
+                                        się
+                                    </a>
+                                </div>
+                                <div class="mx-2">
+                                    <a href="/register" class="btn btn-secondary btn-rounded">Utwórz
+                                        konto
+                                    </a>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -52,31 +59,37 @@
             <h2>Ostatnio dodani nauczyciele</h2>
 
             <div class="card flex-row mb-4"><img class="card-img-left example-card-img-responsive"
-                                            src="/postboot/assets/img/thumbnail.jpg"/>
+                                                 src="/postboot/assets/img/thumbnail.jpg"/>
                 <div class="card-body">
                     <h4 class="card-title h5 h4-sm">Anna Kowalska</h4>
                     <p><small>Angielski</small></p>
-                    <p class="card-text">Doświadczona nauczycielka języka angielskiego, która pomoże Ci w poprawie umiejętności mówienia, pisania i rozumienia. Zajęcia dostosowane do Twojego poziomu, skupiające się na praktycznych umiejętnościach.</p>
+                    <p class="card-text">Doświadczona nauczycielka języka angielskiego, która pomoże Ci w poprawie
+                        umiejętności mówienia, pisania i rozumienia. Zajęcia dostosowane do Twojego poziomu, skupiające
+                        się na praktycznych umiejętnościach.</p>
                 </div>
             </div>
             <div class="card flex-row mb-4"><img class="card-img-left example-card-img-responsive"
-                                            src="/postboot/assets/img/thumbnail.jpg"/>
+                                                 src="/postboot/assets/img/thumbnail.jpg"/>
                 <div class="card-body">
                     <h4 class="card-title h5 h4-sm">Anna Kowalska</h4>
                     <p><small>Angielski</small></p>
-                    <p class="card-text">Doświadczona nauczycielka języka angielskiego, która pomoże Ci w poprawie umiejętności mówienia, pisania i rozumienia. Zajęcia dostosowane do Twojego poziomu, skupiające się na praktycznych umiejętnościach.</p>
+                    <p class="card-text">Doświadczona nauczycielka języka angielskiego, która pomoże Ci w poprawie
+                        umiejętności mówienia, pisania i rozumienia. Zajęcia dostosowane do Twojego poziomu, skupiające
+                        się na praktycznych umiejętnościach.</p>
                 </div>
             </div>
             <div class="card flex-row mb-4"><img class="card-img-left example-card-img-responsive"
-                                            src="/postboot/assets/img/thumbnail.jpg"/>
+                                                 src="/postboot/assets/img/thumbnail.jpg"/>
                 <div class="card-body">
                     <h4 class="card-title h5 h4-sm">Anna Kowalska</h4>
                     <p><small>Angielski</small></p>
-                    <p class="card-text">Doświadczona nauczycielka języka angielskiego, która pomoże Ci w poprawie umiejętności mówienia, pisania i rozumienia. Zajęcia dostosowane do Twojego poziomu, skupiające się na praktycznych umiejętnościach.</p>
+                    <p class="card-text">Doświadczona nauczycielka języka angielskiego, która pomoże Ci w poprawie
+                        umiejętności mówienia, pisania i rozumienia. Zajęcia dostosowane do Twojego poziomu, skupiające
+                        się na praktycznych umiejętnościach.</p>
                 </div>
             </div>
             <div class="card flex-row mb-4"><img class="card-img-left example-card-img-responsive"
-                                            src="/postboot/assets/img/thumbnail.jpg"/>
+                                                 src="/postboot/assets/img/thumbnail.jpg"/>
                 <div class="card-body">
                     <h4 class="card-title h5 h4-sm">Anna Kowalska</h4>
                     <p><small>Angielski</small></p>
