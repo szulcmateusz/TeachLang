@@ -15,6 +15,10 @@
                         <div class="d-flex justify-content-center">
                             <?php if (auth()->loggedIn()): ?>
                                 <div class="mx-2">
+                                    <a href="<?=url_to('instructor_new')?>" class="btn btn-success btn-rounded">Zapisz się jako nauczyciel
+                                    </a>
+                                </div>
+                                <div class="mx-2">
                                     <a href="/logout" class="btn btn-secondary btn-rounded">Wyloguj się
                                     </a>
                                 </div>
