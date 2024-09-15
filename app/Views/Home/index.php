@@ -46,8 +46,10 @@
                 <?php foreach ($languages as $language): ?>
                     <div class="col-sm-3 mb-5">
                         <div>
-                            <div><img src="<?= $language['image_path'] ?>" class="w-50 rounded-circle"></div>
-                            <p><?= $language['name'] ?></p>
+                            <a href="<?= url_to('language', $language['name']) ?>">
+                                <div><img src="<?= $language['image_path'] ?>" class="w-50 rounded-circle"></div>
+                                <p><?= $language['name'] ?></p>
+                            </a>
                         </div>
                     </div>
                 <?php endforeach; ?>

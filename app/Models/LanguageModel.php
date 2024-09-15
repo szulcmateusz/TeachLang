@@ -4,5 +4,5 @@ use CodeIgniter\Model;
 
 class LanguageModel extends Model
 {
-    protected $table      = 'languages';
+    protected $table = 'languages';
 }
