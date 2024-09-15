@@ -1,0 +1,48 @@
+body {
+    cursor: url('/assets/img/arrow-cursor.svg'), default;
+    min-height: 100vh;
+    /*font-family: "Coiny", system-ui;*/
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*header#main {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    background-image: url("/assets/img/rose-petals.svg");*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    min-height: 100vh;*/
+/*    padding: 20px 0;*/
+/*    font-family: "Coiny", system-ui;*/
+/*    font-weight: 400;*/
+/*    font-style: normal;*/
+/*    font-size: 24px;*/
+/*}*/
+
+header#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("/assets/img/abstract-envelope.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header#main .header-text {
+    font-size: 20px;
+}
+
+section#languages-list {
+    background-image: url("/assets/img/subtle-stripes.svg");
+}
+
+section#last-teachers {
+    background-image: url('/assets/img/alternating-arrowhead.svg');
+}
+
+footer {
+    background-color: #fce2e2;
+}

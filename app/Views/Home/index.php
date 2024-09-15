@@ -1,0 +1,111 @@
+<?= $this->extend('layouts/default') ?>
+
+<?= $this->section('content') ?>
+    <header id="main" class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center py-6">
+                    <div>
+                        <div>
+                            <img src="/assets/img/logo.webp" alt="Logo" class="w-50 mb-2">
+                        </div>
+                        <p class="header-text">Znajdź nauczyciela i rozpocznij naukę języka, dopasowaną do Twoich
+                            potrzeb oraz poziomu zaawansowania. Wybierz mentora, który pomoże Ci w szybkim opanowaniu
+                            podstaw, doskonaleniu gramatyki czy rozwijaniu płynności w mowie.</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="mx-2">
+                                <button type="button" class="btn btn-success btn-rounded" data-mdb-ripple-init>Zaloguj
+                                    się
+                                </button>
+                            </div>
+                            <div class="mx-2">
+                                <button type="button" class="btn btn-secondary btn-rounded" data-mdb-ripple-init>Utwórz
+                                    konto
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="/assets/img/undraw_around_the_world_re_rb1p.svg">
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="languages-list" class="p-4">
+        <div class="text-center w-75 m-auto">
+            <h2>Jakiego języka chcesz się dziś nauczyć?</h2>
+            <div class="row mt-5">
+                <?php foreach ($languages as $language): ?>
+                    <div class="col-sm-3 mb-5">
+                        <div>
+                            <div><img src="<?= $language['image_path'] ?>" class="w-50 rounded-circle"></div>
+                            <p><?= $language['name'] ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+    <section id="last-teachers" class="text-center p-4">
+        <div class="container">
+            <h2>Ostatnio dodani nauczyciele</h2>
+
+            <div class="card flex-row mb-4"><img class="card-img-left example-card-img-responsive"
+                                            src="/postboot/assets/img/thumbnail.jpg"/>
+                <div class="card-body">
+                    <h4 class="card-title h5 h4-sm">Anna Kowalska</h4>
+                    <p><small>Angielski</small></p>
+                    <p class="card-text">Doświadczona nauczycielka języka angielskiego, która pomoże Ci w poprawie umiejętności mówienia, pisania i rozumienia. Zajęcia dostosowane do Twojego poziomu, skupiające się na praktycznych umiejętnościach.</p>
+                </div>
+            </div>
+            <div class="card flex-row mb-4"><img class="card-img-left example-card-img-responsive"
+                                            src="/postboot/assets/img/thumbnail.jpg"/>
+                <div class="card-body">
+                    <h4 class="card-title h5 h4-sm">Anna Kowalska</h4>
+                    <p><small>Angielski</small></p>
+                    <p class="card-text">Doświadczona nauczycielka języka angielskiego, która pomoże Ci w poprawie umiejętności mówienia, pisania i rozumienia. Zajęcia dostosowane do Twojego poziomu, skupiające się na praktycznych umiejętnościach.</p>
+                </div>
+            </div>
+            <div class="card flex-row mb-4"><img class="card-img-left example-card-img-responsive"
+                                            src="/postboot/assets/img/thumbnail.jpg"/>
+                <div class="card-body">
+                    <h4 class="card-title h5 h4-sm">Anna Kowalska</h4>
+                    <p><small>Angielski</small></p>
+                    <p class="card-text">Doświadczona nauczycielka języka angielskiego, która pomoże Ci w poprawie umiejętności mówienia, pisania i rozumienia. Zajęcia dostosowane do Twojego poziomu, skupiające się na praktycznych umiejętnościach.</p>
+                </div>
+            </div>
+            <div class="card flex-row mb-4"><img class="card-img-left example-card-img-responsive"
+                                            src="/postboot/assets/img/thumbnail.jpg"/>
+                <div class="card-body">
+                    <h4 class="card-title h5 h4-sm">Anna Kowalska</h4>
+                    <p><small>Angielski</small></p>
+                    <p class="card-text">Doświadczona nauczycielka języka angielskiego, która pomoże Ci w poprawie
+                        umiejętności mówienia, pisania i rozumienia. Zajęcia dostosowane do Twojego poziomu, skupiające
+                        się na praktycznych umiejętnościach.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--    <header id="main">-->
+    <!--        <div class="text-center w-75">-->
+    <!--            <div class="text-center mb-5">-->
+    <!--                <img src="/assets/img/logo.png" alt="Logo" class="w-25">-->
+    <!--            </div>-->
+    <!---->
+    <!--            <h1>Witaj</h1>-->
+    <!--            <h2>Jakiego języka chcesz się dziś nauczyć?</h2>-->
+    <!--            <div class="row mt-5">-->
+    <!--                --><?php //foreach ($languages as $language): ?>
+    <!--                    <div class="col-sm-3 mb-5">-->
+    <!--                        <div>-->
+    <!--                            <div><img src="--><?php //=$language['image_path']?><!--" class="w-50 rounded-circle"></div>-->
+    <!--                            <p>--><?php //= $language['name'] ?><!--</p>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                --><?php //endforeach; ?>
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </header>-->
+
+<?= $this->endSection() ?>
