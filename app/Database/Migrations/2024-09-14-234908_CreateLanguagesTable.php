@@ -26,6 +26,11 @@ class CreateLanguagesTable extends Migration
                 'null'       => false,
                 'unique'     => true,
             ],
+            'image_path' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'null' => false,
+            ],
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('languages');
