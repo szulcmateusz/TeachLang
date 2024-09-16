@@ -60,6 +60,7 @@
                 <p class="text-center"><?= lang('Auth.haveAccount') ?> <a href="<?= url_to('login') ?>"><?= lang('Auth.login') ?></a></p>
 
             </form>
+            <p><a href="<?=url_to('/')?>">Powrót do strony głównej</a></p>
         </div>
     </div>
 </div>

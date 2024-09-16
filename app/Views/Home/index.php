@@ -77,6 +77,11 @@
                                                  src="/postboot/assets/img/thumbnail.jpg"/>
                 <div class="card-body">
                     <h4 class="card-title h5 h4-sm"><?=$instructor['username']?></h4>
+                    <?php if (auth()->loggedIn()): ?>
+                        <small>Numer kontaktowy: <a href="tel:<?=$instructor['phone']?>"><?=$instructor['phone']?></a></small>
+                    <?php else: ?>
+                        <small>Numer kontaktowy dostępny tylko dla zalogowanych</small>
+                    <?php endif; ?>
                     <p class="card-text"><?=$instructor['description']?></p>
                 </div>
             </div>
