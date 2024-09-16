@@ -46,3 +46,19 @@ section#last-teachers {
 footer {
     background-color: #fce2e2;
 }
+
+header#language_header {
+    background-image: url("/assets/img/sun-tornado.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    /*padding: 80px 12px;*/
+}
+
+.logo {
+    max-width: 200px;
+}
+
+#bar-container {
+    background-color: rgba(255,255,255,0.4);
+}

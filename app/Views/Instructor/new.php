@@ -57,6 +57,12 @@
 
                     <form action="<?= url_to('instructor_create') ?>" method="post">
                         <?= $this->include('Instructor/form') ?>
+
+                        <div class="d-grid col-12 col-md-8 mx-auto m-3">
+                            <button type="submit" class="btn btn-primary btn-block">Potwierdź rejestrację jako
+                                instruktor
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>

@@ -3,20 +3,31 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\InstructorLanguageModel;
+use App\Models\InstructorModel;
 use App\Models\LanguageModel;
 use CodeIgniter\HTTP\ResponseInterface;
 
 class LanguageController extends BaseController
 {
-    public function index($languageName)
+    public function show($languageName)
     {
-        $model = new LanguageModel();
-        $language = $model->where('name', $languageName)->first();
+        $languageModel = new LanguageModel();
+        $language = $languageModel->where('name', $languageName)->first();
 
         if (!$language) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
-        dd($language);
+        $instructorModel = new InstructorModel();
+
+        $instructors = $instructorModel->getInstructorsByLanguage($language['id']);
+
+//        dd($instructors);
+
+        return view('Language/show', [
+            'language' => $language,
+            'instructors' => $instructors,
+        ]);
     }
 }

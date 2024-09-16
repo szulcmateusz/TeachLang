@@ -58,6 +58,11 @@
                 <form action="<?= url_to('instructor_update') ?>" method="post">
                     <input type="hidden" name="_method" value="PATCH" />
                     <?= $this->include('Instructor/form') ?>
+
+                    <div class="d-grid col-12 col-md-8 mx-auto m-3">
+                        <button type="submit" class="btn btn-primary btn-block">Aktualizuj
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>

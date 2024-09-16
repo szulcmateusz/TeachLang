@@ -75,6 +75,10 @@ class InstructorController extends BaseController
         $instructorModel = new InstructorModel();
         $instructor = $instructorModel->where('user_id', auth()->user()->id)->first();
 
+        if (!$instructor) {
+            return redirect('/');
+        }
+
         $languageModel = new LanguageModel();
         $instructorLanguageModel = new InstructorLanguageModel();
         $languages = $languageModel->findAll();
