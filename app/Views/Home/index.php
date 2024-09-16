@@ -58,7 +58,7 @@
                 <?php foreach ($languages as $language): ?>
                     <div class="col-sm-3 mb-5">
                         <div>
-                            <a href="<?= url_to('language', $language['name']) ?>">
+                            <a class="text-black" href="<?= url_to('language', $language['name']) ?>">
                                 <div><img src="<?= $language['image_path'] ?>" class="w-50 rounded-circle"></div>
                                 <p><?= $language['name'] ?></p>
                             </a>
@@ -73,8 +73,7 @@
             <h2>Ostatnio dodani nauczyciele</h2>
 
             <?php foreach($latestInstructors as $instructor): ?>
-            <div class="card flex-row mb-4"><img class="card-img-left example-card-img-responsive"
-                                                 src="/postboot/assets/img/thumbnail.jpg"/>
+            <div class="card flex-row mb-4">
                 <div class="card-body">
                     <h4 class="card-title h5 h4-sm"><?=$instructor['username']?></h4>
                     <?php if (auth()->loggedIn()): ?>

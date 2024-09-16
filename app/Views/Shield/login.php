@@ -62,7 +62,7 @@
                     <p class="text-center"><?= lang('Auth.forgotPassword') ?> <a href="<?= url_to('magic-link') ?>"><?= lang('Auth.useMagicLink') ?></a></p>
                 <?php endif ?>
 
-                <?php if (setting('Auth.allowRegistration')) : ?>u
+                <?php if (setting('Auth.allowRegistration')) : ?>
                     <p class="text-center"><?= lang('Auth.needAccount') ?> <a href="<?= url_to('register') ?>"><?= lang('Auth.register') ?></a></p>
                 <?php endif ?>
 

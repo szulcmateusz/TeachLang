@@ -1,5 +1,5 @@
 body {
-    cursor: url('/assets/img/arrow-cursor.svg'), default;
+    /*cursor: url('/assets/img/arrow-cursor.svg'), default;*/
     min-height: 100vh;
     /*font-family: "Coiny", system-ui;*/
     font-weight: 400;
