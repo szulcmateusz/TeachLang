@@ -56,38 +56,7 @@
                     <?php endif ?>
 
                     <form action="<?= url_to('instructor_create') ?>" method="post">
-                        <?= csrf_field() ?>
-
-                        <div class="form-floating mb-3">
-                            <input type="tel" class="form-control" name="phone" inputmode="phone"
-                                   value="<?= old('phone') ?>" required>
-                            <label for="phone">Nr telefonu</label>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" name="description" id="description" cols="30"
-                                      rows="10"></textarea>
-                            <label for="description">Opis</label>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="phone">Jakich języków uczysz?</label>
-                            <?php foreach ($languages as $language): ?>
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" name="<?= $language['name'] ?>"
-                                           id="<?= $language['name'] ?>">
-                                    <label class="form-check-label text-left"
-                                           for="<?= $language['name'] ?>"><?= $language['name'] ?></label>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-
-                        <div class="d-grid col-12 col-md-8 mx-auto m-3">
-                            <button type="submit" class="btn btn-primary btn-block">Potwierdź rejestrację jako
-                                instruktor
-                            </button>
-                        </div>
-
+                        <?= $this->include('Instructor/form') ?>
                     </form>
                 </div>
             </div>

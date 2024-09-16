@@ -10,5 +10,7 @@ $routes->get('/language/(:segment)', 'LanguageController::index/$1', ['as' => 'l
 
 $routes->get('/instructor/new', 'InstructorController::new', ['as' => 'instructor_new']);
 $routes->post('/instructor', 'InstructorController::create', ['as' => 'instructor_create']);
+$routes->get('/instructor/edit', 'InstructorController::edit', ['as' => 'instructor_edit']);
+$routes->patch('/instructor', 'InstructorController::update', ['as' => 'instructor_update']);
 
 service('auth')->routes($routes);

@@ -14,10 +14,17 @@
                             podstaw, doskonaleniu gramatyki czy rozwijaniu płynności w mowie.</p>
                         <div class="d-flex justify-content-center">
                             <?php if (auth()->loggedIn()): ?>
-                                <div class="mx-2">
-                                    <a href="<?=url_to('instructor_new')?>" class="btn btn-success btn-rounded">Zapisz się jako nauczyciel
-                                    </a>
-                                </div>
+                                <?php if ($instructor): ?>
+                                    <div class="mx-2">
+                                        <a href="<?= url_to('instructor_edit') ?>" class="btn btn-success btn-rounded">Edytuj profil instruktora</a>
+                                    </div>
+                                <?php else: ?>
+                                    <div class="mx-2">
+                                        <a href="<?= url_to('instructor_new') ?>" class="btn btn-success btn-rounded">Zapisz
+                                            się jako nauczyciel
+                                        </a>
+                                    </div>
+                                <?php endif; ?>
                                 <div class="mx-2">
                                     <a href="/logout" class="btn btn-secondary btn-rounded">Wyloguj się
                                     </a>
