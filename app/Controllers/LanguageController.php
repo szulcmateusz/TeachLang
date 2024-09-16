@@ -23,8 +23,6 @@ class LanguageController extends BaseController
 
         $instructors = $instructorModel->getInstructorsByLanguage($language['id']);
 
-//        dd($instructors);
-
         return view('Language/show', [
             'language' => $language,
             'instructors' => $instructors,

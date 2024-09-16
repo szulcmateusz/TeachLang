@@ -19,9 +19,12 @@ class HomeController extends BaseController
 
         $languages = $languageModel->findAll();
 
+        $latestInstructors = $instructorModel->getLatestInstructorsWithUsers(4);
+
         return view('Home/index', [
             'languages' => $languages,
             'instructor' => $instructor,
+            'latestInstructors' => $latestInstructors,
         ]);
     }
 }

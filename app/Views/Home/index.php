@@ -16,7 +16,8 @@
                             <?php if (auth()->loggedIn()): ?>
                                 <?php if ($instructor): ?>
                                     <div class="mx-2">
-                                        <a href="<?= url_to('instructor_edit') ?>" class="btn btn-success btn-rounded">Edytuj profil instruktora</a>
+                                        <a href="<?= url_to('instructor_edit') ?>" class="btn btn-success btn-rounded">Edytuj
+                                            profil instruktora</a>
                                     </div>
                                 <?php else: ?>
                                     <div class="mx-2">
@@ -71,46 +72,15 @@
         <div class="container">
             <h2>Ostatnio dodani nauczyciele</h2>
 
+            <?php foreach($latestInstructors as $instructor): ?>
             <div class="card flex-row mb-4"><img class="card-img-left example-card-img-responsive"
                                                  src="/postboot/assets/img/thumbnail.jpg"/>
                 <div class="card-body">
-                    <h4 class="card-title h5 h4-sm">Anna Kowalska</h4>
-                    <p><small>Angielski</small></p>
-                    <p class="card-text">Doświadczona nauczycielka języka angielskiego, która pomoże Ci w poprawie
-                        umiejętności mówienia, pisania i rozumienia. Zajęcia dostosowane do Twojego poziomu, skupiające
-                        się na praktycznych umiejętnościach.</p>
+                    <h4 class="card-title h5 h4-sm"><?=$instructor['username']?></h4>
+                    <p class="card-text"><?=$instructor['description']?></p>
                 </div>
             </div>
-            <div class="card flex-row mb-4"><img class="card-img-left example-card-img-responsive"
-                                                 src="/postboot/assets/img/thumbnail.jpg"/>
-                <div class="card-body">
-                    <h4 class="card-title h5 h4-sm">Anna Kowalska</h4>
-                    <p><small>Angielski</small></p>
-                    <p class="card-text">Doświadczona nauczycielka języka angielskiego, która pomoże Ci w poprawie
-                        umiejętności mówienia, pisania i rozumienia. Zajęcia dostosowane do Twojego poziomu, skupiające
-                        się na praktycznych umiejętnościach.</p>
-                </div>
-            </div>
-            <div class="card flex-row mb-4"><img class="card-img-left example-card-img-responsive"
-                                                 src="/postboot/assets/img/thumbnail.jpg"/>
-                <div class="card-body">
-                    <h4 class="card-title h5 h4-sm">Anna Kowalska</h4>
-                    <p><small>Angielski</small></p>
-                    <p class="card-text">Doświadczona nauczycielka języka angielskiego, która pomoże Ci w poprawie
-                        umiejętności mówienia, pisania i rozumienia. Zajęcia dostosowane do Twojego poziomu, skupiające
-                        się na praktycznych umiejętnościach.</p>
-                </div>
-            </div>
-            <div class="card flex-row mb-4"><img class="card-img-left example-card-img-responsive"
-                                                 src="/postboot/assets/img/thumbnail.jpg"/>
-                <div class="card-body">
-                    <h4 class="card-title h5 h4-sm">Anna Kowalska</h4>
-                    <p><small>Angielski</small></p>
-                    <p class="card-text">Doświadczona nauczycielka języka angielskiego, która pomoże Ci w poprawie
-                        umiejętności mówienia, pisania i rozumienia. Zajęcia dostosowane do Twojego poziomu, skupiające
-                        się na praktycznych umiejętnościach.</p>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </section>
     <!--    <header id="main">-->

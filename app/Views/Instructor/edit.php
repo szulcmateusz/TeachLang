@@ -25,6 +25,10 @@
     .btn-primary:active {
         background-color: #fd575dc7 !important;
     }
+
+    a {
+        color: #fd575dc7 !important;
+    }
 </style>
 <?= $this->endSection() ?>
 
@@ -64,6 +68,7 @@
                         </button>
                     </div>
                 </form>
+                <p><a href="<?=url_to('/')?>">Powrót do strony głównej</a></p>
             </div>
         </div>
     </div>
